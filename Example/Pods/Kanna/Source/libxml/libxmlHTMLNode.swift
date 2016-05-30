@@ -22,7 +22,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-import libxml2
 
 /**
 libxmlHTMLNode
@@ -45,8 +44,8 @@ internal final class libxmlHTMLNode: XMLElement {
     
     var innerHTML: String? {
         if let html = self.toHTML {
-            let inner = html.stringByReplacingOccurrencesOfString("</[^>]*>$", withString: "", options: .RegularExpressionSearch, range: nil)
-                            .stringByReplacingOccurrencesOfString("^<[^>]*>", withString: "", options: .RegularExpressionSearch, range: nil)
+            let inner = html.stringByReplacingOccurrencesOfString("</.*>$", withString: "", options: .RegularExpressionSearch, range: nil)
+                            .stringByReplacingOccurrencesOfString("^<.*>", withString: "", options: .RegularExpressionSearch, range: nil)
             return inner
         }
         return nil
@@ -69,15 +68,13 @@ internal final class libxmlHTMLNode: XMLElement {
     
     
     subscript(attributeName: String) -> String? {
-        var attr = nodePtr.memory.properties
-        while attr != nil {
+        for var attr = nodePtr.memory.properties; attr != nil; attr = attr.memory.next {
             let mem = attr.memory
             if let tagName = String.fromCString(UnsafePointer(mem.name)) {
                 if attributeName == tagName {
                     return libxmlGetNodeContent(mem.children)
                 }
             }
-            attr = attr.memory.next
         }
         return nil
     }
@@ -121,7 +118,7 @@ internal final class libxmlHTMLNode: XMLElement {
         
         var nodes : [XMLElement] = []
         let size = Int(nodeSet.memory.nodeNr)
-        for i in 0 ..< size {
+        for var i = 0; i < size; ++i {
             let node: xmlNodePtr = nodeSet.memory.nodeTab[i]
             let htmlNode = libxmlHTMLNode(docPtr: docPtr, node: node)
             nodes.append(htmlNode)

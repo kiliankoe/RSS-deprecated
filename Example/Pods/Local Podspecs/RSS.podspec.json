@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "Kanna": [
-      "~> 1.0.6"
+      "1.0.2"
     ]
   },
   "source_files": "RSS/Classes/**/*"
