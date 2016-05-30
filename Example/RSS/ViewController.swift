@@ -7,18 +7,14 @@
 //
 
 import UIKit
+import RSS
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let feed = try? RSS.loadURL(NSURL(string: "https://xkcd.com/rss.xml")!)
+        print(feed)
     }
-
 }
-
