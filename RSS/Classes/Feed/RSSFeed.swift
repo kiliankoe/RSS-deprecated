@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kanna
 
 /**
  *  A channel contains metadata regarding the channel and a list of items.
@@ -78,27 +79,34 @@ public struct RSSFeed {
 }
 
 public extension RSSFeed {
-    init(title: String, link: NSURL, description: String) {
+    init(withXML xml: XMLDocument) throws {
+        // title, link and description are required elements for any RSS feed
+        guard let title = xml.at_css("channel title")?.text else { throw RSSError.ParseError }
+        guard let linkText = xml.at_css("channel link")?.text else { throw RSSError.ParseError }
+        guard let link = NSURL(string: linkText) else { throw RSSError.ParseError }
+        guard let description = xml.at_css("channel description")?.text else { throw RSSError.ParseError }
+
         self.title = title
         self.link = link
         self.descr = description
-        self.items = []
 
-        language = nil
-        copyright = nil
-        managingEditor = nil
-        webMaster = nil
-        pubDate = nil
-        lastBuildDate = nil
-        category = nil
-        generator = nil
-        docs = nil
-        cloud = nil
-        ttl = nil
-        image = nil
-        textInput = nil
-        skipHours = nil
-        skipDays = nil
+        self.language = xml.at_css("channel>language")?.text
+        self.copyright = xml.at_css("channel>copyright")?.text
+        self.managingEditor = xml.at_css("channel>managingEditor")?.text
+        self.webMaster = xml.at_css("channel>webMaster")?.text
+        self.pubDate = RSS.dateFormatter.dateFromString(xml.at_css("channel>pubDate")?.text ?? "")
+        self.lastBuildDate = RSS.dateFormatter.dateFromString(xml.at_css("channel>lastBuildDate")?.text ?? "")
+        self.category = nil // TODO
+        self.generator = xml.at_css("channel>generator")?.text
+        self.docs = NSURL(string: xml.at_css("channel>docs")?.text ?? "")
+        self.cloud = nil // TODO
+        self.ttl = Int(xml.at_css("channel>ttl")?.text ?? "")
+        self.image = nil // TODO
+        self.textInput = nil // TODO
+        self.skipHours = nil // TODO
+        self.skipDays = nil // TODO
+
+        self.items = xml.css("item").map { RSSItem.init(withXML: $0) }
     }
 }
 

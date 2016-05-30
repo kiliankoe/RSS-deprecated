@@ -43,12 +43,12 @@ public class RSS {
     }
 
     private static func parse(xml: XMLDocument) throws -> RSSFeed {
-        guard let title = xml.at_css("channel title")?.text else { throw RSSError.ParseError }
-        guard let link = xml.at_css("channel link")?.text else { throw RSSError.ParseError }
-        guard let linkURL = NSURL(string: link) else { throw RSSError.ParseError }
-        guard let description = xml.at_css("channel description")?.text else { throw RSSError.ParseError }
-
-        let feed = RSSFeed(title: title, link: linkURL, description: description)
-        return feed
+        return try RSSFeed(withXML: xml)
     }
+
+    internal static let dateFormatter: NSDateFormatter = {
+        let dF = NSDateFormatter()
+        dF.dateFormat = "E, d MM yyyy HH:mm:ss Z"
+        return dF
+    }()
 }

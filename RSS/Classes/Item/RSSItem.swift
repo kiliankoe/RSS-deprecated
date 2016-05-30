@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kanna
 
 /**
  *  A single item, representing a "story", of an RSS feed.
@@ -44,4 +45,27 @@ public struct RSSItem {
 
     /// RSS channel the item came from, with optional title
     public let source: (String?, NSURL)?
+}
+
+extension RSSItem {
+    /**
+     Initialize an RSSItem with a fitting XMLElement
+
+     - parameter xml: xml element
+
+     - returns: new RSSItem
+     */
+    init(withXML xml: XMLElement) {
+        self.title = xml.at_css("title")?.text
+        self.link = NSURL(string: xml.at_css("link")?.text ?? "")
+        self.descr = xml.at_css("description")?.text
+        self.author = xml.at_css("author")?.text
+        self.category = nil // TODO
+        self.comments = NSURL(string: xml.at_css("comments")?.text ?? "")
+        self.enclosure = nil // TODO
+        self.guid = xml.at_css("guid")?.text
+        self.guidIsPermaLink = NSURL(string: self.guid ?? "") != nil
+        self.pubDate = RSS.dateFormatter.dateFromString(xml.at_css("pubDate")?.text ?? "")
+        self.source = nil // TODO
+    }
 }
