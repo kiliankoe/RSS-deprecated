@@ -1,0 +1,6 @@
+framework module RSS {
+  umbrella header "RSS-umbrella.h"
+
+  export *
+  module * { export * }
+}

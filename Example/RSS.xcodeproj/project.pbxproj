@@ -39,7 +39,7 @@
 		607FACE51AFB9204008FA782 /* RSS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		67FCB78EDCC60ED26AEE3EAA /* RSS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RSS.podspec; path = ../RSS.podspec; sourceTree = "<group>"; };
+		67FCB78EDCC60ED26AEE3EAA /* RSS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = RSS.podspec; path = ../RSS.podspec; sourceTree = "<group>"; };
 		70CB7BC2DC0A9C2E2CD4E9B0 /* Pods_RSS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECDBE126271823606D9AF5F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8270965FBDFF842DE0EB6A34 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
