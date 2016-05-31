@@ -62,14 +62,40 @@ public struct RSSFeed {
     /// Time to live for channel contents
     public let ttl: Int?
 
-    /// Channel image
-    public let image: RSSImage?
+    /// Channel image - URL to the GIF, JPEG or PNG resource
+    public let imageURL: NSURL?
+
+    /// Channel image - description used in the `alt` HTML attribute
+    public let imageTitle: String?
+
+    /// Channel image - Link that the image should link to when rendered
+    public let imageLink: NSURL?
+
+    /// Channel image - Width, max is 144. Default should be 88.
+    public let imageWidth: Int?
+
+    /// Channel image - Height, max is 400. Default should be 31.
+    public let imageHeight: Int?
+
+    /// Channel image - Text that should be included in the `title` HTML attribute
+    public let imageDescription: String?
 
 //    /// PICS rating for the channel
 //    public let rating:
 
-    /// Info for a text input box that can be displayed with the channel
-    public let textInput: RSSTextInput?
+    // Channels can contain a text input box to be rendered when displaying channel info
+
+    /// Title of the submit button in the text input box
+    public let textInputTitle: String?
+
+    /// Explains the text input area
+    public let textInputDescription: String?
+
+    /// Name of the text input text object
+    public let textInputName: String?
+
+    /// URL of the CGI script that processes text input requests
+    public let textInputLink: NSURL?
 
     /// Hint for aggregators which hours they can skip
     public let skipHours: [Int]?
@@ -82,12 +108,13 @@ public extension RSSFeed {
     init(withXML xml: XMLDocument) throws {
         // title, link and description are required elements for any RSS feed
         guard let title = xml.at_css("channel title")?.text else { throw RSSError.ParseError }
-        guard let linkText = xml.at_css("channel link")?.text else { throw RSSError.ParseError }
-        guard let link = NSURL(string: linkText) else { throw RSSError.ParseError }
-        guard let description = xml.at_css("channel description")?.text else { throw RSSError.ParseError }
-
         self.title = title
+
+        guard let linkText = xml.at_css("channel link")?.text,
+            let link = NSURL(string: linkText) else { throw RSSError.ParseError }
         self.link = link
+
+        guard let description = xml.at_css("channel description")?.text else { throw RSSError.ParseError }
         self.descr = description
 
         self.language = xml.at_css("channel>language")?.text
@@ -101,10 +128,22 @@ public extension RSSFeed {
         self.docs = NSURL(string: xml.at_css("channel>docs")?.text ?? "")
         self.cloud = nil // TODO
         self.ttl = Int(xml.at_css("channel>ttl")?.text ?? "")
-        self.image = nil // TODO
-        self.textInput = nil // TODO
         self.skipHours = nil // TODO
         self.skipDays = nil // TODO
+
+        // TODO
+        self.imageURL = nil
+        self.imageLink = nil
+        self.imageTitle = nil
+        self.imageWidth = nil
+        self.imageHeight = nil
+        self.imageDescription = nil
+
+        // TODO
+        self.textInputLink = nil
+        self.textInputName = nil
+        self.textInputTitle = nil
+        self.textInputDescription = nil
 
         self.items = xml.css("item").map { RSSItem.init(withXML: $0) }
     }

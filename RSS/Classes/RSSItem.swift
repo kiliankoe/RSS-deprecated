@@ -31,9 +31,6 @@ public struct RSSItem {
     /// URL for a comments page relating to the item
     public let comments: NSURL?
 
-    /// Media object attached to the item
-    public let enclosure: RSSItemEnclosure?
-
     /// Unique identifier for the item
     public let guid: String?
 
@@ -45,6 +42,17 @@ public struct RSSItem {
 
     /// RSS channel the item came from, with optional title
     public let source: (String?, NSURL)?
+
+    // Items can contain a media object
+
+    /// Media object URL
+    public let enclosureURL: NSURL?
+
+    /// Media object length in bytes
+    public let enclosureLength: UInt?
+
+    /// Media object MIME type
+    public let enclosureMIMEType: String?
 }
 
 extension RSSItem {
@@ -62,10 +70,14 @@ extension RSSItem {
         self.author = xml.at_css("author")?.text
         self.category = nil // TODO
         self.comments = NSURL(string: xml.at_css("comments")?.text ?? "")
-        self.enclosure = nil // TODO
         self.guid = xml.at_css("guid")?.text
         self.guidIsPermaLink = NSURL(string: self.guid ?? "") != nil
         self.pubDate = RSS.dateFormatter.dateFromString(xml.at_css("pubDate")?.text ?? "")
         self.source = nil // TODO
+
+        // TODO
+        self.enclosureURL = nil
+        self.enclosureLength = nil
+        self.enclosureMIMEType = nil
     }
 }

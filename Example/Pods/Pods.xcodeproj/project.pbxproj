@@ -26,7 +26,6 @@
 		295B66DE388FBF2B6BA728D16E571C57 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E925C1DDC42512F8C17F9F229CA8E35D /* libxmlHTMLDocument.swift */; };
 		2A0F98EDF6A74D4905BE61503B9D9239 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5B790D051D600FBAFB1FC3EEC0565 /* CSS.swift */; };
 		2C6F31CA5077DEBFB4DE71CB35D01DD2 /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = B616AF6621CC6A21C22E105552408F52 /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CC1F32A7AED332E350E487A7903D5A8 /* RSSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CAADB7CC8C7C9F1C02C77EFB8E657 /* RSSImage.swift */; };
 		30AACAA8D51DC8C429577D9B67BB016C /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF817514A1E6170BA62521D95358F4E /* BeginWith.swift */; };
 		31629295E87A24C98238C66D41983C49 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F5482A43743BC9A2528C4F70FFD8B1 /* BeVoid.swift */; };
 		38F5CE4B4C59A81734A93E32D35B696E /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED29D2EB0E92AA84C61AC2EE8E6795 /* FailureMessage.swift */; };
@@ -99,7 +98,6 @@
 		9B5DE58927557CE87968C051D2A1C47E /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3902819356FCC34F91E8A6E8A4AF5 /* BeLogical.swift */; };
 		9F08F74CB8740CF0EFF26746EEB0C930 /* CurrentTestCaseTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F7956A051E719823AE536CCF022E7C /* CurrentTestCaseTracker.m */; };
 		A0A37792877F2DA09B5C58D67FCD2819 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C948804C5DEFAC12AAA2F711795DDB75 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
-		A12C5FED2B87B288AACE5BCA03C14739 /* RSSTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52785484DD526B119037EDC67FEB939 /* RSSTextInput.swift */; };
 		A2CABD326609AD67377700A148785E09 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA4F1DE1596F253491205176F728ED /* BeAnInstanceOf.swift */; };
 		A374A2729E32469085C5025EC7115EB8 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6F933CD37EEE0CE9EC648F81D43BA /* Stringers.swift */; };
 		A55EC200F57C00E9A78D8A9DA4545338 /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B608448CA180D95725281582BFD49 /* HaveCount.swift */; };
@@ -138,7 +136,6 @@
 		E9A500611CF699885DE8A6BAB4E6B392 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281A1667A0CF4A69679C678022A57375 /* BeEmpty.swift */; };
 		ECF72188995D8C15CDEB46501965A93A /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912EE135EA7B1A22EFC5774C7519B17 /* NSBundle+CurrentTestBundle.swift */; };
 		F41FB9BB0E1B306D7EFBFB94BCE0CD27 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD1265FD08E5AC30DB31FC3303DE73 /* QuickConfiguration.m */; };
-		F560FE18AF74A0DEF58A16536C5CCF87 /* RSSItemEnclosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06128B4A1592D7CA3873107B23280312 /* RSSItemEnclosure.swift */; };
 		F7D5D03096B5068B9EB17015C9EC32D5 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F26A50C6A3675276B0D6BF3B5D1CB0E /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F85A9207A8601CE7F835CEC56790616F /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9302451C8EED69284DC13178BF7500D /* Expectation.swift */; };
 		F8DF0EA4B7C34511BE363F8646DA27D9 /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = F18C02D7A945A85CE4411D082A876B67 /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -190,7 +187,6 @@
 		0194ECC3851D5ADE2EB3C28758C56941 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Sources/Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		02EADC19B15947BF0FE82C8293E5E862 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		031F9D637FCC70CA6ACE0A1403B8AF01 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
-		06128B4A1592D7CA3873107B23280312 /* RSSItemEnclosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RSSItemEnclosure.swift; sourceTree = "<group>"; };
 		076817F74D5138318940C6751282D791 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
 		08F72D2D8CF67473A8E1204DAEADD4E2 /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Sources/Quick/DSL/QCKDSL.m; sourceTree = "<group>"; };
 		0ADA4F1DE1596F253491205176F728ED /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
@@ -265,7 +261,6 @@
 		88F5482A43743BC9A2528C4F70FFD8B1 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
 		89E3A0FD3A3B00225F40B80F92AED332 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFB456908E86D1C0EEFB83D373B9577 /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = Library/libxml/xmlregexp.h; sourceTree = "<group>"; };
-		8C1CAADB7CC8C7C9F1C02C77EFB8E657 /* RSSImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RSSImage.swift; sourceTree = "<group>"; };
 		8C898EE3315293C052A061E7D921FA1E /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		8CF817514A1E6170BA62521D95358F4E /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
 		8D4D64B452613120B1E010FB70DA4553 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Quick/Configuration/Configuration.swift; sourceTree = "<group>"; };
@@ -283,7 +278,6 @@
 		9D6379130CCAEAAA339A4C969A820224 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A318E2EF8FF246F2BC0EF8B6F3E59033 /* ObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCMatcher.swift; path = Sources/Nimble/Wrappers/ObjCMatcher.swift; sourceTree = "<group>"; };
 		A3C3761F1988FF1B3BDD86EFE37BF6CE /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = Library/libxml/globals.h; sourceTree = "<group>"; };
-		A52785484DD526B119037EDC67FEB939 /* RSSTextInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RSSTextInput.swift; sourceTree = "<group>"; };
 		A65E367F760ACBB67BB60400FD62ABC1 /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = Library/libxml/xmlerror.h; sourceTree = "<group>"; };
 		A78D0FF9652B02D510925B2CE11817DF /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
 		A8C1031E47D319835757C864EFB4680D /* Pods-RSS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RSS_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -484,15 +478,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C90D977940EE9448819A862A11661F4 /* Item */ = {
-			isa = PBXGroup;
-			children = (
-				D45A90A42D0B5B4B3998C87CBC2A7CC2 /* RSSItem.swift */,
-				06128B4A1592D7CA3873107B23280312 /* RSSItemEnclosure.swift */,
-			);
-			path = Item;
-			sourceTree = "<group>";
-		};
 		5804D9C8F08AEAB211742F1EB92AE906 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,16 +490,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble";
-			sourceTree = "<group>";
-		};
-		73303EDEFDD742756369CCAA2BB58B38 /* Feed */ = {
-			isa = PBXGroup;
-			children = (
-				6B579B44B878318538D91EC8C29FC268 /* RSSFeed.swift */,
-				8C1CAADB7CC8C7C9F1C02C77EFB8E657 /* RSSImage.swift */,
-				A52785484DD526B119037EDC67FEB939 /* RSSTextInput.swift */,
-			);
-			path = Feed;
 			sourceTree = "<group>";
 		};
 		743CA688365B684724F1C1F500299BE0 /* Support Files */ = {
@@ -753,8 +728,8 @@
 			children = (
 				14F54A770E995F405E7F5F8CE8E7DFA1 /* RSS.swift */,
 				18F68DD274953F8DCABDF70806382FB6 /* RSSError.swift */,
-				73303EDEFDD742756369CCAA2BB58B38 /* Feed */,
-				4C90D977940EE9448819A862A11661F4 /* Item */,
+				6B579B44B878318538D91EC8C29FC268 /* RSSFeed.swift */,
+				D45A90A42D0B5B4B3998C87CBC2A7CC2 /* RSSItem.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -996,10 +971,7 @@
 				4787325D54F75B3EEB4AFAB2A7D6ADB4 /* RSS.swift in Sources */,
 				8A10E2093ADAD6D2D459343D152D5128 /* RSSError.swift in Sources */,
 				E1CBC6A195422E067C486377BC618242 /* RSSFeed.swift in Sources */,
-				2CC1F32A7AED332E350E487A7903D5A8 /* RSSImage.swift in Sources */,
 				1A6E8ED57648FAF12035CF3EBABCD062 /* RSSItem.swift in Sources */,
-				F560FE18AF74A0DEF58A16536C5CCF87 /* RSSItemEnclosure.swift in Sources */,
-				A12C5FED2B87B288AACE5BCA03C14739 /* RSSTextInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
