@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/RSS.svg?style=flat)](http://cocoapods.org/pods/RSS)
 [![Platform](https://img.shields.io/cocoapods/p/RSS.svg?style=flat)](http://cocoapods.org/pods/RSS)
 
+RSS is aiming to be a spec compliant RSS/Atom Feed Parser (and maybe Generator? Discuss [here](https://github.com/kiliankoe/RSS/issues/4)) with a comfortable *swifty* API.
+
+It's not very close to having reached that goal at the current time. Please check back later 🙃
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
