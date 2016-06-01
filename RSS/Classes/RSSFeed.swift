@@ -131,19 +131,17 @@ public extension RSSFeed {
         self.skipHours = nil // TODO
         self.skipDays = nil // TODO
 
-        // TODO
-        self.imageURL = nil
-        self.imageLink = nil
-        self.imageTitle = nil
-        self.imageWidth = nil
-        self.imageHeight = nil
-        self.imageDescription = nil
+        self.imageURL = NSURL(string: xml.at_css("channel>image>url")?.text ?? "")
+        self.imageLink = NSURL(string: xml.at_css("channel>image>link")?.text ?? "")
+        self.imageTitle = xml.at_css("channel>image>title")?.text
+        self.imageWidth = Int(xml.at_css("channel>image>width")?.text ?? "")
+        self.imageHeight = Int(xml.at_css("channel>image>height")?.text ?? "")
+        self.imageDescription = xml.at_css("channel>image>description")?.text
 
-        // TODO
-        self.textInputLink = nil
-        self.textInputName = nil
-        self.textInputTitle = nil
-        self.textInputDescription = nil
+        self.textInputTitle = xml.at_css("channel>textInput>title")?.text
+        self.textInputLink = NSURL(string: xml.at_css("channel>textInput>link")?.text ?? "")
+        self.textInputName = xml.at_css("channel>textInput>name")?.text
+        self.textInputDescription = xml.at_css("channel>textInput>description")?.text
 
         self.items = xml.css("item").map { RSSItem.init(withXML: $0) }
     }

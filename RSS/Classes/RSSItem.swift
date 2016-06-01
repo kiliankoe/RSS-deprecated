@@ -34,7 +34,7 @@ public struct RSSItem {
     /// Unique identifier for the item
     public let guid: String?
 
-    /// If `true` the item's guid is a URL
+    /// If `true` the item's guid can be interpreted as a URL
     public let guidIsPermaLink: Bool?
 
     /// Date when the item was published
