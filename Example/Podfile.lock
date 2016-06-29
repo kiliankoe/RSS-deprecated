@@ -1,12 +1,12 @@
 PODS:
-  - Kanna (1.0.2)
+  - Kanna (1.1.0)
   - Nimble (3.2.0)
   - Quick (0.9.2)
   - RSS (0.1.0):
-    - Kanna (= 1.0.2)
+    - Kanna (= 1.1)
 
 DEPENDENCIES:
-  - Kanna (= 1.0.2)
+  - Kanna (= 1.1)
   - Nimble (~> 3.0)
   - Quick (~> 0.8)
   - RSS (from `../`)
@@ -16,11 +16,11 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Kanna: 059afb193a9f8ea34f46cb55a8b11bf4257efad8
+  Kanna: 355ed0193e5d8caf4fd996856b5bc98d586c11b6
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
-  RSS: 1281b7de9efeca3837becf4797c53d651b6060b3
+  RSS: 8cc63c7cc32a433dbf79d9b3f55698e09124cca2
 
-PODFILE CHECKSUM: 348a8ed4326b709099e9b692d91df00d080425fa
+PODFILE CHECKSUM: 56a2580b0bd66d62496d4f832e383b12aa2463ff
 
 COCOAPODS: 1.0.0

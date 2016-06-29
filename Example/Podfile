@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'RSS_Example' do
   pod 'RSS', :path => '../'
-  pod 'Kanna', '1.0.2'
+  pod 'Kanna', '1.1'
 
   target 'RSS_Tests' do
     inherit! :search_paths
